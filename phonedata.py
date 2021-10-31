@@ -22,10 +22,12 @@ print ("""
 
     CODED BY ELITE-3 """)
 try:
-    import phonenumbers
-except ModuleNotFoundError:
-    print("REQUIRED MODULES IS NOT INSTALLED \nPLS INSTALL REQUIREMNTS.TXT")
-    a=0
+ print("importing all modules")
+    importlib.import_module("phonenumbers")
+except ImportError:
+    import pip
+    print"phonenumbers not found installing ... ")
+    pip.main(['install',"phonenumbers"])
 else :
     print("required modules are installed   skipping..... \n \n")
     print("press ctrl+c to exit \n \n")
